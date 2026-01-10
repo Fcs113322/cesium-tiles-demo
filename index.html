@@ -6,7 +6,7 @@
 		<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
 		<meta name = "viewport" content = "width=device-width, initial-scale = 1, maximum-scale = 1, minimum-scale = 1, user-scalable = no">
 		<title>OSGBLab Cesium Data Viewer</title>
-		<script src = "/Cesium/Cesium.js"></script>
+		<script src = "./Cesium/Cesium.js"></script>
 		<style>
 			@import url(./Cesium/Widgets/widgets.css);
 			html, body, #OSGBLab_Container{
@@ -47,7 +47,7 @@
 		});
 		viewer.camera.flyToBoundingSphere(boundingSphere, { duration: 0 });
 		var tiles = viewer.scene.primitives.add(new Cesium.Cesium3DTileset({
-			url: '/Data/tileset.json',
+			url: './Data/tileset.json',
 			maximumScreenSpaceError :  16,
 			maximumNumberOfLoadedTiles : IsMobile() ? 32 : 1024
 		}));
